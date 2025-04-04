@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+:root {
+  --bg: #0e0e0e;
+  --accent: #00fff7;
+  --highlight: #00c4ff;
+  --text: #ffffff;
+  --shadow: rgba(0, 255, 255, 0.2);
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 40px;
+  background-image: radial-gradient(circle at top left, #202020 0%, #0e0e0e 100%);
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent);
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px var(--accent);
+}
+
+input, textarea, button {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 12px;
+  background: #1a1a1a;
+  color: var(--text);
+  border: 1px solid var(--highlight);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 10px var(--shadow);
+}
+
+button {
+  background-color: var(--accent);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--highlight);
+}
+
+.topic {
+  background: #1f1f1f;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.topic:hover {
+  transform: scale(1.02);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#auth-buttons {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.auth-button {
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-button:hover {
+  background: var(--highlight);
+}
+
