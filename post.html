@@ -1,0 +1,28 @@
+<!-- post.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Post</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <h1>Create a New Forum Topic</h1>
+  <form id="post-form">
+    <input type="text" id="title" placeholder="Topic Title" required><br>
+    <textarea id="content" placeholder="Start the discussion..." required></textarea><br>
+    <button type="submit">Create</button>
+  </form>
+  <script src="scripts/api.js"></script>
+  <script>
+    document.getElementById('post-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+      await createPost({ title, content });
+      window.location.href = `${title}.html`;
+    });
+  </script>
+</body>
+</html>
