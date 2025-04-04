@@ -1,0 +1,30 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customize Your Profile</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <h1>Your Profile</h1>
+  <div id="profile-section">
+    <p>Username: <span id="username"></span></p>
+    <label>Bio:</label>
+    <textarea id="bio"></textarea>
+    <br>
+    <label>Theme Color:</label>
+    <input type="color" id="themeColor">
+    <br>
+    <button onclick="saveProfile()">Save</button>
+  </div>
+  <script>
+    function saveProfile() {
+      localStorage.setItem('bio', document.getElementById('bio').value);
+      localStorage.setItem('themeColor', document.getElementById('themeColor').value);
+      alert("Profile updated!");
+    }
+    document.getElementById('username').innerText = localStorage.getItem('username');
+  </script>
+</body>
+</html>
